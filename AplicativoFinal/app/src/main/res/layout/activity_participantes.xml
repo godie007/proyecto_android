@@ -8,15 +8,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.uniquindio.edu.aplicativofinal.Participante">
+    tools:context=".actividades.ParticipanteActivity">
 
-    <TextView
-        android:text="Participantes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="54dp"
-        android:id="@+id/textView5" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ListaParticipante"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

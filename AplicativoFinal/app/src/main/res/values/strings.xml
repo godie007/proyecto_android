@@ -5,6 +5,7 @@
     <string name="participantes_en_juego">Participantes en Juego</string>
     <string name="agregar_participantes">Agregar Participantes</string>
     <string name="votaciones">Votaciones</string>
+    <string name="cambiaridioma">Cambiar Idioma</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->

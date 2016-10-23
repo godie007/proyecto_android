@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.uniquindio.edu.aplicativofinal">
+    package="uniquindio.edu.co.proyectoandroid">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -8,19 +11,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login">
+        <activity android:name=".actividades.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Inicio" />
-        <activity android:name=".Entrenador" />
-        <activity android:name=".Participante" />
-        <activity android:name=".ParticipanteEnJuego" />
-        <activity android:name=".AgregarParticipante" />
-        <activity android:name=".Votacion"></activity>
+        <activity android:name=".actividades.InicioActivity" />
+        <activity android:name=".actividades.EntrenadorActivity" />
+        <activity android:name=".actividades.ParticipanteActivity" />
+        <activity android:name=".actividades.ParticipanteEnJuegoActivity" />
+        <activity android:name=".actividades.AgregarParticipanteActivity" />
+        <activity android:name=".actividades.VotacionActivity"></activity>
     </application>
 
 </manifest>
