@@ -2,4 +2,13 @@
 <resources>
     <string name="app_name">The vozarrón Uniquindio</string>
     <string name="entrenadores">Trainers</string>
+    <string name="cambiaridioma">Change language</string>
+    <string name="participantes">Participants</string>
+    <string name="votaciones">Ratings</string>
+    <string name="participantes_en_juego">Game participants</string>
+    <string name="nombre">Name</string>
+    <string name="foto">Photo</string>
+    <string name="ver">See</string>
+    <string name="agregar_participantes">Add Participants</string>
+    <string name="genero">Gender</string>
 </resources>

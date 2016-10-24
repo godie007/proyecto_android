@@ -23,7 +23,9 @@
         <activity android:name=".actividades.ParticipanteActivity" />
         <activity android:name=".actividades.ParticipanteEnJuegoActivity" />
         <activity android:name=".actividades.AgregarParticipanteActivity" />
-        <activity android:name=".actividades.VotacionActivity"></activity>
+        <activity android:name=".actividades.VotacionActivity" />
+        <activity android:name=".actividades.InicioAdminActivity" />
+        <activity android:name=".actividades.DetalleEntrenadorActivity"></activity>
     </application>
 
 </manifest>

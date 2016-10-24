@@ -1,8 +1,10 @@
 package uniquindio.edu.co.proyectoandroid.actividades;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import uniquindio.edu.co.proyectoandroid.R;
 
@@ -17,6 +19,24 @@ public class EntrenadorActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+    public void verDetalleEntrenador1(View view){
+        Intent intent = new Intent(this, DetalleEntrenadorActivity.class);
+        startActivity(intent);
+    }
+    public void verDetalleEntrenador2(View view){
+        Intent intent = new Intent(this, DetalleEntrenadorActivity.class);
+        startActivity(intent);
+    }
+    public void verDetalleEntrenador3(View view){
+        Intent intent = new Intent(this, DetalleEntrenadorActivity.class);
+        startActivity(intent);
     }
 
     @Override

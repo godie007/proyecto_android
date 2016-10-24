@@ -49,13 +49,11 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
             extends RecyclerView.ViewHolder {
         private TextView txtNombre;
         private ImageView imagen;
-        private Button buttonver;
 
         public ParticipanteViewHolder(View itemView) {
             super(itemView);
             txtNombre = (TextView) itemView.findViewById(R.id.labelnombre);
             imagen = (ImageView) itemView.findViewById(R.id.imagenparticipante);
-            buttonver = (Button) itemView.findViewById(R.id.botonver);
         }
 
         public void binParticipante(Participante p) {
