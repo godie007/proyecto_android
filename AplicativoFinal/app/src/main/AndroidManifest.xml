@@ -26,6 +26,7 @@
         <activity android:name=".actividades.VotacionActivity" />
         <activity android:name=".actividades.InicioAdminActivity" />
         <activity android:name=".actividades.DetalleEntrenadorActivity"></activity>
+
     </application>
 
 </manifest>

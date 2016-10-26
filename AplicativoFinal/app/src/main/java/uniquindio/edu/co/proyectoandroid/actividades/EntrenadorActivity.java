@@ -28,14 +28,17 @@ public class EntrenadorActivity extends AppCompatActivity {
     }
     public void verDetalleEntrenador1(View view){
         Intent intent = new Intent(this, DetalleEntrenadorActivity.class);
+        intent.putExtra("Entrenador","1");
         startActivity(intent);
     }
     public void verDetalleEntrenador2(View view){
         Intent intent = new Intent(this, DetalleEntrenadorActivity.class);
+        intent.putExtra("Entrenador","2");
         startActivity(intent);
     }
     public void verDetalleEntrenador3(View view){
         Intent intent = new Intent(this, DetalleEntrenadorActivity.class);
+        intent.putExtra("Entrenador","3");
         startActivity(intent);
     }
 
