@@ -1,6 +1,10 @@
 package uniquindio.edu.co.proyectoandroid.actividades;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import uniquindio.edu.co.proyectoandroid.R;
 import uniquindio.edu.co.proyectoandroid.actividades.util.Usuario;
@@ -20,16 +25,26 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Locale locale = new Locale("ES");
+        Locale.setDefault(locale);
+        Resources resources = this.getResources();
+        Configuration configuration = resources.getConfiguration();
+        configuration.locale = locale;
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+        getSupportActionBar().setTitle(R.string.app_name);
+
         usuarios = new ArrayList<>();
         usuarios.add(new Usuario("dfe","123"));
         usuarios.add(new Usuario("root","123"));
 
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         usuario = (EditText)findViewById(R.id.usuario);
         password = (EditText)findViewById(R.id.password);
+
+
 
     }
 

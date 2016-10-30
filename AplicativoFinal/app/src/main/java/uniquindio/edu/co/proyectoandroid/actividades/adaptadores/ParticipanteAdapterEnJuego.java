@@ -15,23 +15,23 @@ import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
 /**
  * Created by Luisa on 10/23/2016.
  */
-public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapter.ParticipanteViewHolder>{
+public class ParticipanteAdapterEnJuego extends  RecyclerView.Adapter<ParticipanteAdapterEnJuego.ParticipanteViewHolder>{
 
     private List<Participante> participantes;
 
-    public ParticipanteAdapter(List<Participante> participantes) {
+    public ParticipanteAdapterEnJuego(List<Participante> participantes) {
         this.participantes = participantes;
     }
 
     @Override
-    public ParticipanteAdapter.ParticipanteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adaptador_participantes, parent, false);
+    public ParticipanteAdapterEnJuego.ParticipanteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adaptador_participantes_en_juego, parent, false);
         ParticipanteViewHolder nvh = new ParticipanteViewHolder(itemView);
         return nvh;
     }
 
     @Override
-    public void onBindViewHolder(ParticipanteAdapter.ParticipanteViewHolder holder, int position) {
+    public void onBindViewHolder(ParticipanteAdapterEnJuego.ParticipanteViewHolder holder, int position) {
         Participante participante=participantes.get(position);
         holder.binParticipante(participante);
     }

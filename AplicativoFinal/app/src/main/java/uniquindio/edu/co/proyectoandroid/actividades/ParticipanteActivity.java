@@ -23,6 +23,7 @@ public class ParticipanteActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name);
 
         lista = (RecyclerView) findViewById(R.id.ListaParticipante);
         lista.setHasFixedSize(true);

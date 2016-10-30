@@ -19,7 +19,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="31dp">
-
     </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>

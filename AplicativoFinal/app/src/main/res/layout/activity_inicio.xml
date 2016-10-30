@@ -10,131 +10,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".actividades.InicioActivity">
-
-
-    <ScrollView
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:cropToPadding="true"
+        app:srcCompat="@drawable/uq"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+    <ListView
+        android:id="@+id/menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView2" >
+        android:layout_height="wrap_content" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:cropToPadding="true"
-                app:srcCompat="@drawable/uq"
-                tools:ignore="ContentDescription,RtlHardcoded" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/button4"
-                android:background="@color/verde"
-                android:text="@string/participantes_en_juego"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_height="31dp" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/button4"
-                android:background="@color/verde"
-                android:text="@string/participantes_en_juego"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_height="31dp" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_height="31dp"
-                android:layout_below="@+id/button2"
-                android:background="@color/verde"
-                android:text="@string/participantes"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:onClick="verParticipante"
-                android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/button4"
-                android:onClick="verParticipanteEnJuego"
-                android:background="@color/verde"
-                android:text="@string/participantes_en_juego"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_alignParentStart="true"
-                android:layout_height="31dp" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="31dp"
-                android:layout_below="@+id/logo"
-                android:layout_marginTop="46dp"
-                android:background="@color/verde"
-                android:text="@string/entrenadores"
-                android:onClick="verEntrenadores"
-                android:layout_margin="10dp"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse" />
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="match_parent"
-                android:layout_height="31dp"
-                android:onClick="cambiarIdioma"
-                android:background="@color/verde"
-                android:text="@string/cambiaridioma"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"
-                android:layout_marginTop="51dp"
-                android:layout_below="@+id/button"
-                android:layout_centerHorizontal="true" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="31dp"
-                android:background="@color/verde"
-                android:text="@string/votaciones"
-                android:textAllCaps="false"
-                android:textAppearance="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"
-                android:onClick="verVotacion"
-                android:layout_below="@+id/button6"
-                android:layout_alignRight="@+id/button6"
-                android:layout_alignEnd="@+id/button6"
-                android:layout_alignLeft="@+id/button6"
-                android:layout_alignStart="@+id/button6" />
-        </RelativeLayout>
-    </ScrollView>
 </LinearLayout>

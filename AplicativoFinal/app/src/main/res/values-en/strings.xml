@@ -11,4 +11,7 @@
     <string name="ver">See</string>
     <string name="agregar_participantes">Add Participants</string>
     <string name="genero">Gender</string>
+    <string name="password">Password</string>
+    <string name="usuario">User</string>
+    <string name="iniciar_sesion">Log in</string>
 </resources>

@@ -30,8 +30,7 @@ public class Utilidades {
         SharedPreferences prefs =
                 context.getSharedPreferences(MIS_PREFERENCIAS,
                         context.MODE_PRIVATE);
-        String language = prefs.getString(LENGUAJE_DE_PREFERENCIA,
-                LENGUAJE_ES);
+        String language = prefs.getString(LENGUAJE_DE_PREFERENCIA, LENGUAJE_ES);
         if(language.equals(LENGUAJE_ES)){
             language = LENGUAJE_EN;
         }

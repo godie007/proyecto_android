@@ -16,7 +16,7 @@ public class AgregarParticipanteActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        getSupportActionBar().setTitle(R.string.app_name);
 
     }
 

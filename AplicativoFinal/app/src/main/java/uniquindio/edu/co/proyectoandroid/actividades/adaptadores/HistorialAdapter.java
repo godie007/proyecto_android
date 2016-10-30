@@ -46,15 +46,18 @@ public class HistorialAdapter extends  RecyclerView.Adapter<HistorialAdapter.His
     }
     public static class HistorialViewHolder extends RecyclerView.ViewHolder {
         private TextView txtNombre;
+        private TextView txtDescripcion;
 
 
         public HistorialViewHolder(View itemView) {
             super(itemView);
-            txtNombre = (TextView) itemView.findViewById(R.id.labelnombre);
+            txtNombre = (TextView) itemView.findViewById(R.id.nombre);
+            txtDescripcion = (TextView) itemView.findViewById(R.id.descripcion);
         }
 
         public void binParticipante(Historial p) {
             txtNombre.setText(p.getNombre());
+            txtDescripcion.setText(p.getDescrpcion());
         }
     }
 }

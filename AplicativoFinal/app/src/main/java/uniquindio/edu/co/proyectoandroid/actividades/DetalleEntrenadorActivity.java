@@ -1,33 +1,58 @@
 package uniquindio.edu.co.proyectoandroid.actividades;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import uniquindio.edu.co.proyectoandroid.R;
-import uniquindio.edu.co.proyectoandroid.actividades.adaptadores.HistorialAdapter;
-import uniquindio.edu.co.proyectoandroid.actividades.adaptadores.ParticipanteAdapter;
-import uniquindio.edu.co.proyectoandroid.actividades.modelo.Historial;
-import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
+import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Formulario_Entrenador;
+import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Historial;
+import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Participantes;
+
 
 public class DetalleEntrenadorActivity extends AppCompatActivity {
     private String entrenador;
     private RecyclerView lista;
     private RecyclerView lista2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_entrenador);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle(R.string.app_name);
+        // Comprobamos que previamente no hayamos entrado en esta actividad (por ejemplo, al rotar el dispositivo). Si es así se añade el fragmento al contenedor
+        if (savedInstanceState == null) {
+            // Crea el fragmento del detalle de la entrada y lo añade a la actividad
+
+            Bundle arguments = new Bundle();
+            arguments.putString(Fragment_Historial.ARG_ID_ENTRADA_SELECIONADA, getIntent().getStringExtra(Fragment_Historial.ARG_ID_ENTRADA_SELECIONADA));
+            Fragment frag1 = new Fragment_Historial();
+            frag1.setArguments(arguments);
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_listadoHistorial,frag1).commit();
+
+            Bundle arguments2 = new Bundle();
+            arguments2.putString(Fragment_Formulario_Entrenador.ARG_ID_ENTRADA_SELECIONADA, getIntent().getStringExtra(Fragment_Formulario_Entrenador.ARG_ID_ENTRADA_SELECIONADA));
+            Fragment frag2 = new Fragment_Formulario_Entrenador();
+            frag2.setArguments(arguments2);
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_formulario,frag2).commit();
+
+
+            Bundle arguments3 = new Bundle();
+            arguments3.putString(Fragment_Participantes.ARG_ID_ENTRADA_SELECIONADA, getIntent().getStringExtra(Fragment_Participantes.ARG_ID_ENTRADA_SELECIONADA));
+            Fragment frag3 = new Fragment_Participantes();
+            frag3.setArguments(arguments3);
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_partocipantes,frag3).commit();
+
+        }
 
         Bundle bundle = getIntent().getExtras();
         entrenador = bundle.getString("Entrenador");
@@ -52,25 +77,6 @@ public class DetalleEntrenadorActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.adele);
         }
 
-        lista = (RecyclerView) findViewById(R.id.ListaHistorial);
-        lista.setHasFixedSize(true);
-        List<Historial> historials = new ArrayList<>();
-        historials.add(new Historial("Dia1","ocurre un evento"));
-        historials.add(new Historial("Dia2","ocurre un evento"));
-        HistorialAdapter historialAdapter=new HistorialAdapter(historials);
-        lista.setAdapter(historialAdapter);
-        lista.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
-
-        lista2 = (RecyclerView) findViewById(R.id.ListaParticipantes);
-        lista2.setHasFixedSize(true);
-        List<Participante> participantes = new ArrayList<>();
-        participantes.add(new Participante("Luisa",R.drawable.rihanna));
-        participantes.add(new Participante("Julian",R.drawable.jhonny));
-        participantes.add(new Participante("Julian",R.drawable.adele));
-        ParticipanteAdapter participanteAdapter = new ParticipanteAdapter(participantes);
-        lista2.setAdapter(participanteAdapter);
-        lista2.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
-
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -84,5 +90,6 @@ public class DetalleEntrenadorActivity extends AppCompatActivity {
         super.onBackPressed();
         finish();
     }
+
 }
 
