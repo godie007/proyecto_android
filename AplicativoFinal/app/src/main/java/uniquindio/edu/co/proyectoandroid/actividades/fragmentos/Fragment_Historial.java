@@ -21,11 +21,6 @@ public class Fragment_Historial extends Fragment {
 	public static final String ARG_ID_ENTRADA_SELECIONADA = "item_id";
 
 	private RecyclerView lista;
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-
-	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,6 +29,9 @@ public class Fragment_Historial extends Fragment {
 		lista.setHasFixedSize(true);
 		List<Historial> historials = new ArrayList<>();
 		historials.add(new Historial("Historial 1","ocurre un evento"));
+		historials.add(new Historial("Historial 2","ocurre un evento"));
+		historials.add(new Historial("Historial 3","ocurre un evento"));
+		historials.add(new Historial("Historial 4","ocurre un evento"));
 		HistorialAdapter historialAdapter=new HistorialAdapter(historials);
 		lista.setAdapter(historialAdapter);
 		lista.setLayoutManager(new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.VERTICAL, false));

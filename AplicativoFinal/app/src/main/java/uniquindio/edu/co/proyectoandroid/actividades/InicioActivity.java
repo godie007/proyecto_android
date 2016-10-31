@@ -87,10 +87,6 @@ public class InicioActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ParticipanteEnJuegoActivity.class);
         startActivity(intent);
     }
-    public void agregarParticipante(){
-        Intent intent = new Intent(this, AgregarParticipanteActivity.class);
-        startActivity(intent);
-    }
     public void verVotacion(){
         if(Utilidades.estaConectado(getApplicationContext())){
             Intent intent = new Intent(this, VotacionActivity.class);

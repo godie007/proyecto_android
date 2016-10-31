@@ -87,5 +87,13 @@
     <string name="password">Password</string>
     <string name="usuario">Usuario</string>
     <string name="genero">Genero</string>
-    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="edad">Edad</string>
+    <string name="enlace">Enlace</string>
+    <string name="entrenador">Entrenador</string>
+    <string name="estado">Estado</string>
+    <string name="guardar">Guardar</string>
+    <string name="imagen">Imagen</string>
+    <string name="numero_de_votos">Numero de Votos</string>
+    <string name="relacion_universidad">Relacion Universidad</string>
 </resources>

@@ -6,28 +6,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="@style/TextAppearance.AppCompat"
         android:text="Large Text"
-        android:textSize="15dp"
         android:layout_gravity="center_vertical"
-        android:layout_weight="0.38"
+        android:layout_weight="391.01"
         android:layout_marginTop="16dp"
-        android:gravity="center"
         android:padding="15dp"
-        android:id="@+id/nombre" />
+        android:id="@+id/nombre"
+        android:layout_x="-2dp"
+        android:layout_y="0dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="@style/TextAppearance.AppCompat"
         android:text="Large Text"
-        android:textSize="15dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:padding="15dp"
         android:layout_gravity="center_vertical"
-        android:layout_weight="0.38"
-        android:id="@+id/descripcion" />
+        android:id="@+id/descripcion"
+        android:layout_x="97dp"
+        android:layout_y="0dp" />
 
 
 </LinearLayout>

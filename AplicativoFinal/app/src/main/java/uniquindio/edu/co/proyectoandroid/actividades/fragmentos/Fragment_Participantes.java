@@ -1,6 +1,7 @@
 package uniquindio.edu.co.proyectoandroid.actividades.fragmentos;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,6 +38,8 @@ public class Fragment_Participantes extends Fragment {
 		lista.setHasFixedSize(true);
 		List<Participante> participantes = new ArrayList<>();
 		participantes.add(new Participante("Garfied",R.drawable.nick));
+		participantes.add(new Participante("Juanes",R.drawable.juanes));
+		participantes.add(new Participante("Michael",R.drawable.michael));
 		ParticipanteAdapter participanteAdapter = new ParticipanteAdapter(participantes);
 		lista.setAdapter(participanteAdapter);
 		lista.setLayoutManager(new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.VERTICAL, false));

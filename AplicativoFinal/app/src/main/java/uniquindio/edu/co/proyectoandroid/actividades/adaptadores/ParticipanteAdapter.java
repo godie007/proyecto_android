@@ -1,15 +1,19 @@
 package uniquindio.edu.co.proyectoandroid.actividades.adaptadores;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 import uniquindio.edu.co.proyectoandroid.R;
+import uniquindio.edu.co.proyectoandroid.actividades.DetallesDelParticipante;
+import uniquindio.edu.co.proyectoandroid.actividades.InicioAdminActivity;
 import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
 
 /**
@@ -43,11 +47,19 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
     public static class ParticipanteViewHolder extends RecyclerView.ViewHolder {
         private TextView txtNombre;
         private ImageView imagen;
+        private TextView ver;
 
-        public ParticipanteViewHolder(View itemView) {
+        public ParticipanteViewHolder(final View itemView) {
             super(itemView);
             txtNombre = (TextView) itemView.findViewById(R.id.labelnombre);
             imagen = (ImageView) itemView.findViewById(R.id.imagenparticipante);
+            ver = (TextView) itemView.findViewById(R.id.ver);
+            ver.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    v.getContext().startActivity(new Intent(v.getContext(), DetallesDelParticipante.class));
+                }
+            });
         }
 
         public void binParticipante(Participante p) {

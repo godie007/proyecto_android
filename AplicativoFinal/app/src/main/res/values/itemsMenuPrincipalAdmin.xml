@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_principal_admin">
+        <item>@string/entrenadores</item>
+        <item>@string/participantes</item>
+        <item>@string/participantes_en_juego</item>
+        <item>@string/agregar_participantes</item>
+        <item>@string/votaciones</item>
+        <item>@string/cambiaridioma</item>
+    </string-array>
+</resources>

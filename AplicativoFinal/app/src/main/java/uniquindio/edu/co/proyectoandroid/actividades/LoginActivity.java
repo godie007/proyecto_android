@@ -1,12 +1,10 @@
 package uniquindio.edu.co.proyectoandroid.actividades;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -25,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Locale locale = new Locale("ES");
         Locale.setDefault(locale);
         Resources resources = this.getResources();
@@ -38,12 +37,11 @@ public class LoginActivity extends AppCompatActivity {
         usuarios.add(new Usuario("root","123"));
 
         setContentView(R.layout.activity_login);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         usuario = (EditText)findViewById(R.id.usuario);
         password = (EditText)findViewById(R.id.password);
-
 
 
     }

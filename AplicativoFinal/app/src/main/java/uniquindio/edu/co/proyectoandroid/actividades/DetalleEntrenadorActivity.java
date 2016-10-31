@@ -29,30 +29,7 @@ public class DetalleEntrenadorActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle(R.string.app_name);
-        // Comprobamos que previamente no hayamos entrado en esta actividad (por ejemplo, al rotar el dispositivo). Si es así se añade el fragmento al contenedor
-        if (savedInstanceState == null) {
-            // Crea el fragmento del detalle de la entrada y lo añade a la actividad
 
-            Bundle arguments = new Bundle();
-            arguments.putString(Fragment_Historial.ARG_ID_ENTRADA_SELECIONADA, getIntent().getStringExtra(Fragment_Historial.ARG_ID_ENTRADA_SELECIONADA));
-            Fragment frag1 = new Fragment_Historial();
-            frag1.setArguments(arguments);
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_listadoHistorial,frag1).commit();
-
-            Bundle arguments2 = new Bundle();
-            arguments2.putString(Fragment_Formulario_Entrenador.ARG_ID_ENTRADA_SELECIONADA, getIntent().getStringExtra(Fragment_Formulario_Entrenador.ARG_ID_ENTRADA_SELECIONADA));
-            Fragment frag2 = new Fragment_Formulario_Entrenador();
-            frag2.setArguments(arguments2);
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_formulario,frag2).commit();
-
-
-            Bundle arguments3 = new Bundle();
-            arguments3.putString(Fragment_Participantes.ARG_ID_ENTRADA_SELECIONADA, getIntent().getStringExtra(Fragment_Participantes.ARG_ID_ENTRADA_SELECIONADA));
-            Fragment frag3 = new Fragment_Participantes();
-            frag3.setArguments(arguments3);
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_partocipantes,frag3).commit();
-
-        }
 
         Bundle bundle = getIntent().getExtras();
         entrenador = bundle.getString("Entrenador");
