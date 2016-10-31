@@ -18,7 +18,10 @@ import java.util.Locale;
 
 import uniquindio.edu.co.proyectoandroid.R;
 import uniquindio.edu.co.proyectoandroid.actividades.util.Utilidades;
-
+/**
+ * @autor Diego Fernando Echeverry
+ * @autor Luisa Maria Valderrama
+ */
 public class InicioActivity extends AppCompatActivity {
     private ArrayAdapter arrayAdapter;
     private ListView monthsListView;
@@ -28,8 +31,10 @@ public class InicioActivity extends AppCompatActivity {
         Utilidades.obtenerLenguaje(this);
         setContentView(R.layout.activity_inicio);
 
+        //se habilita el boton atras
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //se muestra el titulo con la nueva configuracion de idioma
         getSupportActionBar().setTitle(R.string.app_name);
 
         // storing string resources into Array
@@ -66,27 +71,31 @@ public class InicioActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==android.R.id.home){
-            onBackPressed();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     public void verEntrenadores(){
-        //Toast.makeText(getApplicationContext(), "Ok Vamos a la otra Ventana", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, EntrenadorActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * metodo para redireccionar a la actividad de participantes
+     */
     public void verParticipante(){
         Intent intent = new Intent(this, ParticipanteActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * metodo para redireccionar a la actividad de participantes en juego
+     */
     public void verParticipanteEnJuego(){
         Intent intent = new Intent(this, ParticipanteEnJuegoActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * Metodo para identificar si hay internet y si hay redirecciona a la seccion de votacion
+     */
     public void verVotacion(){
         if(Utilidades.estaConectado(getApplicationContext())){
             Intent intent = new Intent(this, VotacionActivity.class);
@@ -97,6 +106,9 @@ public class InicioActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * metodo que permite cambiar de Ingles a Españos y viceversa
+     */
     public void cambiarIdioma(){
 
         Configuration config = new Configuration();
@@ -113,6 +125,22 @@ public class InicioActivity extends AppCompatActivity {
         finish();
         startActivity(intent);
     }
+    /**
+     *  Se indica en el menu superior al momento de presionar atras el sistema redirige a la actividad anterior
+     * @param item
+     * @return
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==android.R.id.home){
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Al momento de presionar el voton atras se finaliza la actividad actual
+     */
     @Override
     public void onBackPressed() {
         super.onBackPressed();

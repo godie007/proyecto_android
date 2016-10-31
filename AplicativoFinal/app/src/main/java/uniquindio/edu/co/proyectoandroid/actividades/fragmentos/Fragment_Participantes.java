@@ -18,7 +18,10 @@ import uniquindio.edu.co.proyectoandroid.actividades.adaptadores.HistorialAdapte
 import uniquindio.edu.co.proyectoandroid.actividades.adaptadores.ParticipanteAdapter;
 import uniquindio.edu.co.proyectoandroid.actividades.modelo.Historial;
 import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
-
+/**
+ * @autor Diego Fernando Echeverry
+ * @autor Luisa Maria Valderrama
+ */
 public class Fragment_Participantes extends Fragment {
 
 	public static final String ARG_ID_ENTRADA_SELECIONADA = "item_id";
@@ -30,10 +33,17 @@ public class Fragment_Participantes extends Fragment {
 
 	}
 
+	/**
+	 * metodo para mostrar el listado de participantes en un fragmento
+	 * @param inflater
+	 * @param container
+	 * @param savedInstanceState
+     * @return
+     */
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.participantes_lista_fragmento, container, false);
-
+        // se muestran los elementos del adaptador de participa para retornarlo en un framgento
 		lista = (RecyclerView) rootView.findViewById(R.id.ListaParticipantes);
 		lista.setHasFixedSize(true);
 		List<Participante> participantes = new ArrayList<>();

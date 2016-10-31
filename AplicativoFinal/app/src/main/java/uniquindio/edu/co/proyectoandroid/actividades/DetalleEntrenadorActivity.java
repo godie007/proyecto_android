@@ -15,19 +15,28 @@ import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Formula
 import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Historial;
 import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Participantes;
 
-
+/**
+ * @autor Diego Fernando Echeverry
+ * @autor Luisa Maria Valderrama
+ */
 public class DetalleEntrenadorActivity extends AppCompatActivity {
     private String entrenador;
     private RecyclerView lista;
     private RecyclerView lista2;
 
+    /**
+     * Metodo para inicializar los detalles de un determinado entrenador
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_entrenador);
 
+        //se habilita el boton atras
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //se muestra el titulo con la nueva configuracion de idioma
         getSupportActionBar().setTitle(R.string.app_name);
 
 

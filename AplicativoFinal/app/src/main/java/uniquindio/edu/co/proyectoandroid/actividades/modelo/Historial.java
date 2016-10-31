@@ -1,19 +1,24 @@
 package uniquindio.edu.co.proyectoandroid.actividades.modelo;
-
 /**
- * Created by Jack on 10/23/2016.
+ * @autor Diego Fernando Echeverry
+ * @autor Luisa Maria Valderrama
  */
 public class Historial {
 
-
+    // variable
     private String nombre;
     private String descrpcion;
 
+    /**
+     * Metodo contructor
+     * @param nombre
+     * @param descrpcion
+     */
     public Historial(String nombre, String descrpcion) {
         this.nombre = nombre;
         this.descrpcion = descrpcion;
     }
-
+    // Metodos accesores y modificadores
     public String getNombre() {
         return nombre;
     }

@@ -1,7 +1,8 @@
 package uniquindio.edu.co.proyectoandroid.actividades.modelo;
 
 /**
- * Created by Jack on 10/23/2016.
+ * @autor Diego Fernando Echeverry
+ * @autor Luisa Maria Valderrama
  */
 public class Participante {
 
@@ -12,11 +13,16 @@ public class Participante {
     private String relacion;
     private String enlace;
 
+    /**
+     * Metodo Constructor
+     * @param nombre
+     * @param foto
+     */
     public Participante(String nombre, int foto) {
         this.nombre = nombre;
         this.foto = foto;
     }
-
+    // Metodos accesores y modificadores
     public String getCedula() {
         return cedula;
     }

@@ -15,18 +15,28 @@ import uniquindio.edu.co.proyectoandroid.R;
 import uniquindio.edu.co.proyectoandroid.actividades.DetallesDelParticipante;
 import uniquindio.edu.co.proyectoandroid.actividades.InicioAdminActivity;
 import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
-
 /**
- * Created by Luisa on 10/23/2016.
+ * @autor Diego Fernando Echeverry
+ * @autor Luisa Maria Valderrama
  */
 public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapter.ParticipanteViewHolder>{
 
     private List<Participante> participantes;
 
+    /**
+     * metodo constructor para inicializar el listado de particioantes
+     * @param participantes
+     */
     public ParticipanteAdapter(List<Participante> participantes) {
         this.participantes = participantes;
     }
 
+    /**
+     * metodo para mostrar en un adaptador el listado de participantes
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @Override
     public ParticipanteAdapter.ParticipanteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adaptador_participantes, parent, false);
@@ -49,6 +59,10 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
         private ImageView imagen;
         private TextView ver;
 
+        /**
+         * metodo para inicializar las variables de los elementos a mostrar in interfaz
+         * @param itemView
+         */
         public ParticipanteViewHolder(final View itemView) {
             super(itemView);
             txtNombre = (TextView) itemView.findViewById(R.id.labelnombre);
@@ -62,6 +76,10 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
             });
         }
 
+        /**
+         * Metodo para inicializar los valores de un participantes en lo elemento del adaptadore
+         * @param p
+         */
         public void binParticipante(Participante p) {
             txtNombre.setText(p.getNombre());
             imagen.setImageResource(p.getFoto());

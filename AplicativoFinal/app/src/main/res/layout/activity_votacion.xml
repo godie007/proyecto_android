@@ -10,5 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".actividades.VotacionActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ListaParticipante"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="31dp">
+    </android.support.v7.widget.RecyclerView>
+
 
 </RelativeLayout>

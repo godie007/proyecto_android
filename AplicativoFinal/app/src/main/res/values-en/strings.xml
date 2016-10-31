@@ -14,12 +14,12 @@
     <string name="password">Password</string>
     <string name="usuario">User</string>
     <string name="iniciar_sesion">Log in</string>
-    <string name="edad">Edad</string>
-    <string name="enlace">Enlace</string>
-    <string name="entrenador">Entrenador</string>
-    <string name="estado">Estado</string>
-    <string name="guardar">Guardar</string>
-    <string name="imagen">Imagen</string>
-    <string name="numero_de_votos">Numero de Votos</string>
-    <string name="relacion_universidad">Relacion Universidad</string>
+    <string name="edad">Age</string>
+    <string name="enlace">Link</string>
+    <string name="entrenador">Coach</string>
+    <string name="estado">State</string>
+    <string name="guardar">Save</string>
+    <string name="imagen">Image</string>
+    <string name="numero_de_votos">Number of Votes</string>
+    <string name="relacion_universidad">University relationship</string>
 </resources>
