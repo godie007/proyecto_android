@@ -121,7 +121,6 @@ public class InicioAdminActivity extends AppCompatActivity {
         }
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 
-
         Intent intent = getIntent();
         finish();
         startActivity(intent);

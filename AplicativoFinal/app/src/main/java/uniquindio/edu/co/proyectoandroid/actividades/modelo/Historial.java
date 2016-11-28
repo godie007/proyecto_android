@@ -8,15 +8,17 @@ public class Historial {
     // variable
     private String nombre;
     private String descrpcion;
+    private String entrenador;
 
     /**
      * Metodo contructor
      * @param nombre
      * @param descrpcion
      */
-    public Historial(String nombre, String descrpcion) {
+    public Historial(String nombre, String descrpcion,String entrenador) {
         this.nombre = nombre;
         this.descrpcion = descrpcion;
+        this.entrenador =entrenador;
     }
     // Metodos accesores y modificadores
     public String getNombre() {
@@ -31,7 +33,12 @@ public class Historial {
         return descrpcion;
     }
 
-    public void setDescrpcion(String descrpcion) {
-        this.descrpcion = descrpcion;
+    @Override
+    public String toString() {
+        return "Historial{" +
+                "nombre='" + nombre + '\'' +
+                ", descrpcion='" + descrpcion + '\'' +
+                ", entrenador='" + entrenador + '\'' +
+                '}';
     }
 }

@@ -61,10 +61,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/edad"
-        android:layout_above="@+id/edad"
+        android:layout_toStartOf="@+id/cedula"
+        android:layout_above="@+id/cedula"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/edad" />
+        android:layout_toLeftOf="@+id/cedula" />
 
     <TextView
         android:text="@string/relacion_universidad"
@@ -91,8 +91,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView9"
-        android:layout_toLeftOf="@+id/edad"
-        android:layout_toStartOf="@+id/edad" />
+        android:layout_toLeftOf="@+id/cedula"
+        android:layout_toStartOf="@+id/cedula" />
 
     <TextView
         android:text="@string/numero_de_votos"
@@ -128,7 +128,7 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"
-        android:layout_below="@+id/edad"
+        android:layout_below="@+id/cedula"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/textView9"
@@ -147,7 +147,7 @@
         android:layout_alignStart="@+id/entrenador" />
 
     <TextView
-        android:text="@string/edad"
+        android:text="@string/cedula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView9"
@@ -156,8 +156,8 @@
         android:layout_below="@+id/nombre"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/edad"
-        android:layout_toStartOf="@+id/edad"
+        android:layout_toLeftOf="@+id/cedula"
+        android:layout_toStartOf="@+id/cedula"
         android:layout_above="@+id/entrenador" />
 
     <EditText
@@ -165,7 +165,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/edad"
+        android:id="@+id/cedula"
         android:layout_below="@+id/nombre"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -178,7 +178,8 @@
         android:id="@+id/votos"
         android:layout_below="@+id/textView6"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -242,10 +243,10 @@
                 android:layout_alignEnd="@+id/btn_guardar" />
 
             <Button
-    android:text="@string/guardar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/btn_guardar"
+                android:text="@string/guardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_guardar"
                 android:layout_below="@+id/imageButton"
                 android:layout_toRightOf="@+id/textView10" />
 

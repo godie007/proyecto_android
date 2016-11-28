@@ -10,6 +10,9 @@
     <string name="nombre">Nombre</string>
     <string name="foto">Foto</string>
     <string name="ver">Ver</string>
+    <string name="cedula">Cedula</string>
+    <string name="facebook_app_id">673617919327987</string>
+    <string name="fb_login_protocol_scheme">fbAPP_ID</string>
 
 
     <!-- Strings related to Settings -->
@@ -87,7 +90,7 @@
     <string name="password">Password</string>
     <string name="usuario">Usuario</string>
     <string name="genero">Genero</string>
-    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="iniciar_sesion">Iniciar Sesión(Facebook/Local)</string>
     <string name="edad">Edad</string>
     <string name="enlace">Enlace</string>
     <string name="entrenador">Entrenador</string>

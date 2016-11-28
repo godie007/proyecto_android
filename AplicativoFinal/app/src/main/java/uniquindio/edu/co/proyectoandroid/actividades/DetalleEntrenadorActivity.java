@@ -21,8 +21,7 @@ import uniquindio.edu.co.proyectoandroid.actividades.fragmentos.Fragment_Partici
  */
 public class DetalleEntrenadorActivity extends AppCompatActivity {
     private String entrenador;
-    private RecyclerView lista;
-    private RecyclerView lista2;
+
 
     /**
      * Metodo para inicializar los detalles de un determinado entrenador
@@ -47,22 +46,37 @@ public class DetalleEntrenadorActivity extends AppCompatActivity {
         ImageView imgView = (ImageView)findViewById(R.id.foto);
         nombre.setEnabled(false);
         genero.setEnabled(false);
-        if (entrenador.equals("1")){
+        if (entrenador.equals("0")){
             nombre.setText("jhonny rivera");
             genero.setText("Masculino");
             imgView.setImageResource(R.drawable.jhonny);
         }
-        if (entrenador.equals("2")){
+        if (entrenador.equals("1")){
             nombre.setText("Rihanna");
             genero.setText("Femenino");
             imgView.setImageResource(R.drawable.rihanna);
         }
-        if (entrenador.equals("3")){
+        if (entrenador.equals("2")){
             nombre.setText("Adele");
             genero.setText("Femenino");
             imgView.setImageResource(R.drawable.adele);
         }
 
+        if (savedInstanceState == null) {
+            Bundle args = new Bundle();
+            args.putString("Entrenador", entrenador);
+            Fragment_Participantes participantes = new Fragment_Participantes();
+            participantes.setArguments(args);
+            getSupportFragmentManager().beginTransaction().
+            replace(R.id.partocipantes, participantes, "Hola").
+            commit();
+
+            Fragment_Historial historial = new Fragment_Historial();
+            historial.setArguments(args);
+            getSupportFragmentManager().beginTransaction().
+            replace(R.id.historial, historial, "Hola").
+            commit();
+        }
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

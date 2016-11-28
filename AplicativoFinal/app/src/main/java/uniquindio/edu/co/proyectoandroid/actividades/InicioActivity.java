@@ -119,8 +119,6 @@ public class InicioActivity extends AppCompatActivity {
             config.locale = new Locale("en");
         }
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-
-
         Intent intent = getIntent();
         finish();
         startActivity(intent);

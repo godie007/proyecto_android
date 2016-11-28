@@ -21,7 +21,7 @@ import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
  */
 public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapter.ParticipanteViewHolder>{
 
-    private List<Participante> participantes;
+     List<Participante> participantes;
 
     /**
      * metodo constructor para inicializar el listado de particioantes
@@ -58,6 +58,7 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
         private TextView txtNombre;
         private ImageView imagen;
         private TextView ver;
+        private String id;
 
         /**
          * metodo para inicializar las variables de los elementos a mostrar in interfaz
@@ -69,9 +70,13 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
             imagen = (ImageView) itemView.findViewById(R.id.imagenparticipante);
             ver = (TextView) itemView.findViewById(R.id.ver);
             ver.setOnClickListener(new View.OnClickListener() {
+
+
                 @Override
                 public void onClick(View v) {
-                    v.getContext().startActivity(new Intent(v.getContext(), DetallesDelParticipante.class));
+                    Intent intent = new Intent(v.getContext(), DetallesDelParticipante.class);
+                    intent.putExtra("id",id);
+                    v.getContext().startActivity(intent);
                 }
             });
         }
@@ -83,6 +88,7 @@ public class ParticipanteAdapter extends  RecyclerView.Adapter<ParticipanteAdapt
         public void binParticipante(Participante p) {
             txtNombre.setText(p.getNombre());
             imagen.setImageResource(p.getFoto());
+            id = p.get_id();
         }
     }
 }

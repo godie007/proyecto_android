@@ -9,90 +9,86 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.List;
+import com.facebook.FacebookSdk;
 
+import java.util.List;
 import uniquindio.edu.co.proyectoandroid.R;
 import uniquindio.edu.co.proyectoandroid.actividades.DetallesDelParticipante;
-import uniquindio.edu.co.proyectoandroid.actividades.modelo.Voto;
+import uniquindio.edu.co.proyectoandroid.actividades.modelo.Participante;
+
 
 /**
  * @autor Diego Fernando Echeverry
  * @autor Luisa Maria Valderrama
  */
 public class VotoAdapter extends  RecyclerView.Adapter<VotoAdapter.VotoViewHolder>{
-
-    private List<Voto> participantes;
+    private List<Participante> participantes;
 
     /**
-     *  Metodo para asi
+     * metodo constructor para inicializar el listado de particioantes
      * @param participantes
      */
-    public VotoAdapter(List<Voto> participantes) {
+    public VotoAdapter(List<Participante> participantes) {
         this.participantes = participantes;
     }
 
     /**
-     * Metodo para crear la lista
+     * metodo para mostrar en un adaptador el listado de participantes
      * @param parent
      * @param viewType
      * @return
      */
     @Override
-    public VotoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public VotoAdapter.VotoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adaptador_voto, parent, false);
-        VotoViewHolder nvh = new VotoViewHolder(itemView);
+        VotoAdapter.VotoViewHolder nvh = new VotoAdapter.VotoViewHolder(itemView);
         return nvh;
     }
 
-    /**
-     * Metodo para inicializar valores
-     * @param holder
-     * @param position
-     */
     @Override
     public void onBindViewHolder(VotoViewHolder holder, int position) {
-        Voto participante=participantes.get(position);
+        Participante participante=participantes.get(position);
         holder.binParticipante(participante);
     }
+
 
     @Override
     public int getItemCount() {
         return participantes.size();
     }
     public static class VotoViewHolder extends RecyclerView.ViewHolder {
-        private TextView nombre;
+        private TextView txtNombre;
         private ImageView imagen;
-        private TextView numero;
-        private ImageButton btn_voto;
+        private ImageButton ver;
+        private TextView numVotos;
 
         /**
-         * Metodo contructor para el uso de la lista de Participantes en votacion
+         * metodo para inicializar las variables de los elementos a mostrar in interfaz
          * @param itemView
          */
         public VotoViewHolder(final View itemView) {
             super(itemView);
-            nombre = (TextView) itemView.findViewById(R.id.nombre);
+            txtNombre = (TextView) itemView.findViewById(R.id.nombre);
             imagen = (ImageView) itemView.findViewById(R.id.imagen);
-            numero = (TextView) itemView.findViewById(R.id.numero);
-            btn_voto = (ImageButton) itemView.findViewById(R.id.btn_voto);
-            // evento para el boton agregar voto
-            btn_voto.setOnClickListener(new View.OnClickListener() {
+            numVotos  = (TextView) itemView.findViewById(R.id.numero);
+            ver = (ImageButton) itemView.findViewById(R.id.btn_voto);
+            ver.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    v.getContext().startActivity(new Intent(v.getContext(), DetallesDelParticipante.class));
+
+                    //v.getContext().startActivity(new Intent(v.getContext(), DetallesDelParticipante.class));
                 }
             });
-
         }
 
         /**
-         * Metodo para inicializar los valores de cada item de la lista de Participantes en votacion
+         * Metodo para inicializar los valores de un participantes en lo elemento del adaptadore
          * @param p
          */
-        public void binParticipante(Voto p) {
-            nombre.setText(p.getNombre());
+        public void binParticipante(Participante p) {
+            txtNombre.setText(p.getNombre());
             imagen.setImageResource(p.getFoto());
-            numero.setText(""+p.getNumero());
+            numVotos.setText(""+p.getNumVotos());
         }
     }
 }
